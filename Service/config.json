@@ -1,0 +1,29 @@
+{
+  "model_input_minutes": {
+    "depression_window_minutes": 1.0,
+    "anxiety_window_minutes": 1.0,
+    "stress_window_minutes": 1.0,
+    "vitality_window_minutes": 0.5,
+    "insomnia_window_minutes": 1.0,
+    "hrv_index_minutes": 0.5
+  },
+
+  "sample_augmentation": {
+    "augmentation_factor": 1,
+    "num_best_quality_samples": 5
+  },
+
+  "sampling": {
+    "sampling_frequency": 125,
+    "data_minimum_minutes_threshold": 0.6
+  },
+  "settings": {
+    "selected_data_testing_time": 1
+  },
+  
+  "wave_plot_setting":{
+      "normalization_divisor": 1000000, 
+      "filter_minimum_range": -1,
+      "filter_maximum_range": 1
+  }
+}

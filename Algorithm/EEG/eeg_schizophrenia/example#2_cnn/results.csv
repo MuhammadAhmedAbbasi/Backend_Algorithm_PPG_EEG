@@ -1,0 +1,15 @@
+,File 1: model,,,,Augmentation=No,,,,Upsapling: Using Pytorch Dataset Library
+,,,,,,,,,
+Sampling Frequency: 250,,,Length of Trail: 25,,,Batch_size=32,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,Average Result: 55%,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,File 1: model_augmented,,,,Augmentation=yes,,,,Upsapling: Using Pytorch Dataset Library
+,,,,,,,,,
+Sampling Frequency: 250,,,Length of Trail: 25,,,Batch_size=32,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,Average Result: 56%,,,,,,

@@ -1,0 +1,55 @@
+syntax = "proto3";
+
+import "affective.proto";
+import "mentalHealth.proto";
+import "google/protobuf/empty.proto";
+
+package eeg;
+
+// Request to start EEG data collection
+message EegStartRequest {
+  bool processDataVerbose = 1; // Whether to process data in verbose mode
+}
+
+message EegStartRely {
+  bool success = 1; // Whether the request was successful
+}
+
+// Request to stop EEG data collection
+message EegStopRequest {
+  
+}
+
+// Request to upload EEG data
+message EegUploadRequest {
+  repeated int32 data = 1;
+}
+
+// 生成proto message
+message EegProcessedData {
+  repeated float eegLeftWave = 1; // 左脑波
+  repeated float eegRightWave = 2; // 右脑波
+
+  float eegAlphaPower = 3; // α频段能量占比
+  float eegBetaPower = 4; // β频段能量占比
+  float eegThetaPower = 5; // θ频段能量占比
+  float eegDeltaPower = 6; // δ频段能量占比
+  float eegGammaPower = 7; // γ频段能量占比
+}
+
+message MixedUploadReply {
+  oneof reply{
+    EegProcessedData processedData = 1;
+    affective.AffectiveData affectiveData = 2;
+    mentalHealth.MentalHealthLevel mentalHealthLevel = 3;
+  }
+}
+
+service Eeg {
+  // Start EEG Service
+  rpc Start(EegStartRequest) returns (EegStartRely) {};
+  // Stop EEG Service
+  rpc Stop(EegStopRequest) returns (google.protobuf.Empty) {};
+  // Upload EEG Data
+  rpc Upload(stream EegUploadRequest) returns (stream MixedUploadReply) {};
+}

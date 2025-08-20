@@ -1,0 +1,17 @@
+affectivecloud == 1.2.9
+fastapi == 0.111.0
+grpcio == 1.64.1
+grpcio-tools == 1.64.1
+gunicorn
+mypy-protobuf == 3.6.0  # for development, used to generate pyi files for grpc
+neurokit2 == 0.2.9
+numpy == 1.26.4
+pandas == 2.2.2
+pydantic == 2.7.1
+redis == 5.0.4
+requests == 2.31.0
+scikit-learn == 1.4.1.post1
+torch == 2.2.2
+uvicorn == 0.29.0
+onnxruntime == 1.17.3
+protobuf == 5.27.1

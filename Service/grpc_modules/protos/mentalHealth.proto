@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package mentalHealth;
+
+enum MentalHealthType {
+    Depression = 0;
+    Anxiety = 1;
+    Stress = 2;
+    Vitality = 3;
+    Fatigue = 4;
+    Attention = 5;
+}
+
+message MentalHealthLevel {
+    MentalHealthType type = 1;
+    int32 level = 2;
+}

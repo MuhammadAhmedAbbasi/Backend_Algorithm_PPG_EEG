@@ -1,0 +1,15 @@
+,File 1: model_upsampling_manual,,,,Augmentation=Yes,,,,Upsapling: Manual in preprocessing,,,,,,
+,,,,,,,,,,,,,,,
+Sampling Frequency: 250,,,Length of Trail: 25,,,k=400,,"indice=[1, 12, 5, 11, 13, 10, 2, 9, 6, 8, 4, 3, 7, 14]",,,,,,,Batch_size=32
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,Average Result: 69%,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,File 1: model_upsampling_dataloaders,,,,Augmentation=yes,,,,Upsapling: Using Pytorch Dataset Library,,,,,,
+,,,,,,,,,,,,,,,
+Sampling Frequency: 250,,,Length of Trail: 25,,,k=400,,"indice=[2, 3, 6, 10, 9, 12, 14, 7, 1, 4, 8, 13, 5, 11]",,,,,,,Batch_size=32
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,Average Result: 66%,,,,,,,,,,,,

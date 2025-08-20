@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package affective;
+
+enum AffectiveType {
+    Attention = 0;
+    Relax = 1;
+    Stress = 2;
+    Enjoyment = 3;
+}
+
+message AffectiveData {
+    AffectiveType type = 1;
+    float value = 2;
+}
